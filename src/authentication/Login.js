@@ -5,7 +5,7 @@ import * as authActionCreators from './authActionCreators';
 
 const Login = () => (
   <div>
-    <h1>Hello Tesco</h1>
+    <h1>Hello Test</h1>
   </div>
 );
 
