@@ -3,19 +3,18 @@
 This README would normally document whatever steps are necessary to get your application up and running.
 
 ### What is this repository for? ###
-
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+React Boiler Plate with redux setup.
 
 ### How do I get set up? ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+clone the repo 
+`npm install` 
+`npm  run start`
+
+For Build
+`npm run build`
+
+
 
 ### Contribution guidelines ###
 
