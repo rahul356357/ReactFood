@@ -73,22 +73,9 @@ module.exports = {
       }),
       new webpack.HashedModuleIdsPlugin(),
       new webpack.optimize.ModuleConcatenationPlugin(),
-      new webpack.optimize.UglifyJsPlugin({
-        sourceMap: true,
-        compress: {
-          screw_ie8: true,
-          warnings: false,
-        },
-        mangle: {
-          screw_ie8: true,
-        },
-        output: {
-          comments: false,
-          screw_ie8: true,
-        },
-      }),
+
       new SWPrecacheWebpackPlugin({
-        cacheId: 'pms',
+        cacheId: 'test',
         filename: 'serviceWorker.js',
         staticFileGlobsIgnorePatterns: [/\.map$/, /\.json$/],
         dontCacheBustUrlsMatching: /./,

@@ -6,7 +6,8 @@
   "scripts": {
     "start": "npm run local",
     "local": "APP_ENV=local APP_PUBLIC_PATH=/ NODE_ENV=development webpack-dashboard -- run-p local:*",
-    "local:client": "webpack-dev-server --port 8080 --config ./webpack.config.js --hot"
+    "local:client": "webpack-dev-server --port 8080 --config ./webpack.config.js --hot",
+    "build":"NODE_ENV=production webpack --config ./webpack.config.js"
   },
   "author": "test",
   "license": "ISC",
