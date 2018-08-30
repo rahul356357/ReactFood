@@ -6,8 +6,10 @@
   "scripts": {
     "start": "npm run local",
     "local": "APP_ENV=local APP_PUBLIC_PATH=/ NODE_ENV=development webpack-dashboard -- run-p local:*",
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build",
     "local:client": "webpack-dev-server --port 8080 --config ./webpack.config.js --hot",
-    "build":"NODE_ENV=production webpack --config ./webpack.config.js"
+    "build": "NODE_ENV=production webpack --config ./webpack.config.js"
   },
   "author": "test",
   "license": "ISC",
@@ -35,6 +37,7 @@
     "html-webpack-plugin": "3.2.0",
     "npm-run-all": "4.1.2",
     "raw-loader": "0.5.1",
+    "react-styleguidist": "7.3.1",
     "rimraf": "2.6.2",
     "sass-loader": " 7.0.3",
     "style-loader": "0.19.1",
