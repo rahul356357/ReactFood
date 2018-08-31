@@ -8,6 +8,10 @@
     "local": "APP_ENV=local APP_PUBLIC_PATH=/ NODE_ENV=development webpack-dashboard -- run-p local:*",
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build",
+    "lint-staged": "lint-staged",
+    "stylelint-staged": "stylelint --syntax scss",
+    "precommit":"lint-staged",
+     "commit": "git-cz",
     "local:client": "webpack-dev-server --port 8080 --config ./webpack.config.js --hot",
     "build": "NODE_ENV=production webpack --config ./webpack.config.js"
   },
@@ -28,6 +32,7 @@
     "babel-preset-stage-0": "6.24.1",
     "clean-webpack-plugin": "0.1.19",
     "css-loader": " 0.28.11",
+    "cz-conventional-changelog": "2.1.0",
     "eslint": "4.19.1",
     "eslint-config-airbnb": "16.1.0",
     "eslint-plugin-import": "2.8.0",
@@ -35,7 +40,9 @@
     "eslint-plugin-react": "7.6.1",
     "file-loader": "1.1.6",
     "html-webpack-plugin": "3.2.0",
+    "lint-staged": "7.2.2",
     "npm-run-all": "4.1.2",
+    "pre-commit": "1.2.2",
     "raw-loader": "0.5.1",
     "react-styleguidist": "7.3.1",
     "rimraf": "2.6.2",
@@ -67,5 +74,14 @@
     "webpack-bundle-analyzer": "2.13.1",
     "webpack-cli": "2.1.4",
     "webpack-dashboard": "2.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.js": "eslint",
+    "*.scss": "stylelint-staged"
   }
 }

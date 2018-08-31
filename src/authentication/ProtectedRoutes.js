@@ -1,28 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Route } from 'react-router-dom';
-import authService from './authService';
 
-/*eslint-disable*/
-const ProtectedRoutes = (props) => {
-  const { component: Component, isAuthenticated, ...rest } = props;
-  const userDetails = authService.getDetails();
-  return (
-    <Route
-      {...rest}
-      render={() => {
-      if (userDetails.token) {
-        return (<Component {...rest} />);
-      }
-       return (
-         <Component {...rest} />
-       );
-    }}
-    />
-  );
-};
+const ProtectedRoutes = ({ Component, isAuthenticated, ...rest }) => (
+  <Route
+    {...rest}
+    render={() => (
+      <Component {...rest} />
+    )}
+  />
+);
 
 ProtectedRoutes.propTypes = {
+  Component: PropTypes.node,
   isAuthenticated: PropTypes.bool,
 };
 
