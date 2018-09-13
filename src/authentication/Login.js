@@ -5,8 +5,10 @@ import * as authActionCreators from './authActionCreators';
 
 const Login = () => (
   <div>
-    <h1>Hello Test</h1>
-  </div>
+    <h1>
+    Hellodskajdksdaasdasd
+    </h1>
+  </div >
 );
 
 const mapStateToProps = (state) => ({
