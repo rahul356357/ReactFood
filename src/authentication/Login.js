@@ -3,13 +3,18 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as authActionCreators from './authActionCreators';
 
-const Login = () => (
-  <div>
-    <h1>
-    Hellodskajdksdaasdasd
-    </h1>
-  </div >
-);
+class Login extends React.Component {
+  state = {} ;c
+
+  render() {
+    return (
+      <div>
+        <button> Login</button>
+        <button>Login is</button>
+      </div>
+    );
+  }
+}
 
 const mapStateToProps = (state) => ({
   auth: state.auth,

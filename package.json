@@ -11,7 +11,7 @@
     "stylelint-staged": "stylelint --syntax scss",
     "commit": "git-cz",
     "local": "APP_ENV=local APP_PUBLIC_PATH=/ NODE_ENV=development webpack-dashboard -- run-p local:*",
-    "local:client": "webpack-dev-server --port 8080 --content-base src --hot --inline --config ./webpack.config.js ",
+    "local:client": "webpack-dev-server --port 8080  --hot --config ./webpack.config.js ",
     "build": "NODE_ENV=production webpack --config ./webpack.config.js"
   },
   "author": "test",
@@ -39,6 +39,7 @@
     "file-loader": "1.1.6",
     "html-webpack-plugin": "3.2.0",
     "lint-staged": "7.2.2",
+    "node-sass": " 4.9.3",
     "npm-run-all": "4.1.2",
     "raw-loader": "0.5.1",
     "react-styleguidist": "7.3.1",
@@ -46,13 +47,14 @@
     "sass-loader": " 7.0.3",
     "style-loader": "0.19.1",
     "url-loader": "0.6.2",
+    "webpack": " 4.9.1",
     "webpack-dev-server": "3.1.4"
   },
   "dependencies": {
     "babel-polyfill": "6.26.0",
     "date-fns": " 1.29.0",
-    "git-cz": "^1.7.1",
-    "pre-commit": "^1.2.2",
+    "git-cz": " 1.7.1",
+    "pre-commit": " 1.2.2",
     "prop-types": "15.6.1",
     "query-string": "6.1.0",
     "react": "15.4.2",
@@ -70,7 +72,6 @@
     "redux-persist": "5.10.0",
     "redux-thunk": "2.2.0",
     "sw-precache-webpack-plugin": "0.11.5",
-    "webpack": "4.9.1",
     "webpack-bundle-analyzer": "2.13.1",
     "webpack-cli": "2.1.4",
     "webpack-dashboard": "2.0.0"

@@ -30,11 +30,11 @@ module.exports = {
     rules: isProd ? [
       { test: /\.js$/, exclude: /node_modules/, use: ['babel-loader'] },
       { test: /\.css$/, use: ['style-loader', 'css-loader'] },
-      { test: /\\.scss$/, use: ['style-loader', 'css-loader', 'scss-loader'] },
+      { test: /\.scss$/, use: ['style-loader', 'css-loader', 'sass-loader'] },
       { test: /\.(gif|png|jpe?g|svg|ico)$/i, use: [{ loader: 'file-loader', options: { name: 'images/[name].[hash:8].[ext]' } }] },
       { test: /\.(woff(2)?|ttf|otf|eot)(\?[a-z0-9=&.]+)?$/, use: [{ loader: 'url-loader', options: { limit: 1000, name: 'fonts/[name].[hash:8].[ext]' } }] },
     ] : [
-      { test: /\\.scss$/, use: ['style-loader', 'css-loader', 'scss-loader'] },
+      { test: /\.scss$/, use: ['style-loader', 'css-loader', 'sass-loader'] },
       { test: /\.js$/, exclude: /node_modules/, use: [{ loader: 'babel-loader', options: { cacheDirectory: true } }] },
       { test: /\.css$/, use: ['style-loader', 'css-loader'] },
       { test: /\.(gif|png|jpe?g|svg|ico)$/i, use: [{ loader: 'file-loader', options: { name: 'images/[name].[ext]' } }] },
@@ -112,7 +112,7 @@ module.exports = {
     headers: { 'Access-Control-Allow-Origin': '*' },
     overlay: true,
     proxy: {
-      '/api': 'http://',
+      '/': 'http://localhost:3000/',
     },
     quiet: true,
   },
