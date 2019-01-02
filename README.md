@@ -1,28 +1,12 @@
-# README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
 
 ### What is this repository for? ###
-React Boiler Plate with redux setup.
+React Boiler Plate with basic setup of redux and webpack 
 
-### How do I get set up? ###
+<h4> How to start  </h4>
+<code> git clone <reponame> </code> <br>
+<code>cd REACT-BOILERPLATE</code><br>
+<code>npm install </code> <br>
+<code> npm start </code> <br>
 
-clone the repo 
-`npm install` 
-`npm  run start`
-
-For Build
-`npm run build`
-
-
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+The development server will start at <u> <a> localhost:8080  </a> </u>
