@@ -9,4 +9,4 @@ React Boiler Plate with basic setup of redux and webpack
 <code>npm install </code> <br>
 <code> npm start </code> <br>
 
-The development server will start at <u> <a> localhost:8080  </a> </u>
+The development server will start at <u> <a> http://localhost:8080  </a> </u>
