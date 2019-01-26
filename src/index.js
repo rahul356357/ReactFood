@@ -5,7 +5,6 @@ import ReactDOM from 'react-dom';
 import { HashRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import createStore from './store/createStore';
-import './main.scss';
 import Router from './router/Router';
 
 const store = createStore();
