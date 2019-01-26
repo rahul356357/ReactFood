@@ -1,6 +1,6 @@
 import { createStore, compose, applyMiddleware } from 'redux';
 import { middleware as reduxPackMiddleware } from 'redux-pack';
-import { persistStore, persistReducer } from 'redux-persist';
+import { persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import { default as reduxThunk } from 'redux-thunk';
 import api from '../api/api';
@@ -13,7 +13,7 @@ const middlewares = [
 
 const storeEnhancers = [
   applyMiddleware(...middlewares),
-  __LOCAL__ && window.devToolsExtension && window.devToolsExtension(),
+  __LOCAL__ && window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
 ].filter(Boolean);
 
 const persistConfig = {
@@ -24,7 +24,7 @@ const persistConfig = {
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-export default (initialState={}) => {
+export default (initialState = {}) => {
   const store = createStore(
     persistedReducer,
     initialState,

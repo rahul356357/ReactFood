@@ -111,6 +111,7 @@ module.exports = {
     contentBase: path.resolve('./build'),
     headers: { 'Access-Control-Allow-Origin': '*' },
     overlay: true,
+    disableHostCheck: true,
     proxy: {
       '/': 'http://localhost:3000/',
     },
