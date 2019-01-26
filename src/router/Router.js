@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Switch, withRouter } from 'react-router-dom';
-import Login from '../authentication/Login';
+import Basic from '../Basic/Basic';
 
 class AppRouter extends React.Component {
   componentDidMount() {
@@ -11,7 +11,7 @@ class AppRouter extends React.Component {
     return (
       <main>
         <Switch>
-          <Route exact path="/" component={Login} />
+          <Route exact path="/" component={Basic} />
         </Switch>
       </main>
     );
