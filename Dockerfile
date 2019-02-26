@@ -8,8 +8,9 @@ WORKDIR /usr/src/app
 ENV PATH /usr/src/app/node_modules/.bin:$PATH
 
 # install and cache app dependencies
-COPY package.json /usr/src/app/package.json
+COPY . /usr/src/app
 RUN npm install --silent
-EXPOSE 8080
+RUN npm run build
+EXPOSE 5000
 # start app
-CMD ["npm", "start"]
+CMD [ "node" , "server.js" ]

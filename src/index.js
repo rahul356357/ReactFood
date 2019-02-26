@@ -10,7 +10,7 @@ import Router from './router/Router';
 const store = createStore();
 
 ReactDOM.render(
-  <Provider store={store} key="test_key" >
+  <Provider store={store} key="test_key">
     <HashRouter>
       <Router />
     </HashRouter>
